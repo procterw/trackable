@@ -1,5 +1,5 @@
 <template>
-  <div class="trackable-list-component">
+  <div class="trackable-list">
     <ul>
       <TrackableListItem
         v-for="item in trackableListItems"
@@ -25,3 +25,15 @@ export default {
   },
 } 
 </script>
+
+<style scoped>
+  .trackable-list {
+    margin-top: 15px;  
+  }
+
+  .trackable-list ul {
+    padding: 0;
+    margin: 0;
+  }
+</style>
+

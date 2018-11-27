@@ -1,8 +1,12 @@
 <template>
-  <h1>
-    {{ $route.params.trackableId }}
-    {{ selectedTrackable }}
-  </h1>
+  <div>
+    <h1 v-if="loading">
+      LOADING...
+    </h1>
+    <h1 v-if="!loading">
+      {{ selectedTrackable }}
+    </h1>
+  </div>
 </template>
 
 <script>
@@ -10,9 +14,10 @@ export default {
   name: "ViewTrackable",
   computed: {
     selectedTrackable () {
-      // const params = 
-      // return 'testset';
-      return this.$store.getters.selectedTrackable;
+      return this.$store.state.selectedTrackable.properties;
+    },
+    loading () {
+      return this.$store.state.selectedTrackable.loading;
     }
   }
 }

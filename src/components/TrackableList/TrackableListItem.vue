@@ -1,6 +1,6 @@
 <template>
-  <div v:on>
-    {{ item }}
+  <div>
+    <span class="name">{{ item.name }}</span>
     <router-link :to="`/trackable/${item.id}`">
       More!!!!
     </router-link>
@@ -14,3 +14,9 @@ export default {
 };
 </script>
 
+<style scoped>
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+</style>
