@@ -4,20 +4,20 @@
       LOADING...
     </h1>
     <h1 v-if="!loading">
-      {{ selectedTrackable }}
+      {{ selectedQuestion }}
     </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ViewTrackable",
+  name: "ViewQuestion",
   computed: {
-    selectedTrackable () {
-      return this.$store.state.selectedTrackable.properties;
+    selectedQuestion () {
+      return this.$store.state.selectedQuestion.properties;
     },
     loading () {
-      return this.$store.state.selectedTrackable.loading;
+      return this.$store.state.selectedQuestion.loading;
     }
   }
 }

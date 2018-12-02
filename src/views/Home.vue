@@ -1,21 +1,21 @@
 <template>
   <div class="home-view">
-    <TrackableList />
+    <Survey />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TrackableList from "@/components/TrackableList/TrackableList.vue";
-import * as aT from '@/store/modules/trackableList/actionTypes';
+import Survey from "@/components/Survey/Survey.vue";
+import * as aT from '@/store/modules/survey/actionTypes';
 
 export default {
   name: "home",
   components: {
-    TrackableList
+    Survey
   },
   created() {
-    this.$store.dispatch(aT.GET_TRACKABLE_LIST);
+    this.$store.dispatch(aT.GET_SURVEY);
   },
 };
 </script>

@@ -1,15 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import trackableList from './modules/trackableList';
-import selectedTrackable from './modules/selectedTrackable';
+import survey from './modules/survey';
+import selectedQuestion from './modules/selectedQuestion';
 
 Vue.use(Vuex);
 
-console.log(trackableList, selectedTrackable)
-
 export default new Vuex.Store({
   modules: {
-    trackableList,
-    selectedTrackable
+    survey,
+    selectedQuestion
   },
 });

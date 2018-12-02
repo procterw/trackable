@@ -8,17 +8,17 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "trackableList",
+      name: "survey",
       component: Home
     },
     {
-      path: "/trackable/:trackableId",
-      name: "trackable",
+      path: "/question/:questionId",
+      name: "question",
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Trackable.vue")
+        import(/* webpackChunkName: "about" */ "./views/ViewQuestion.vue")
     }
   ]
 });

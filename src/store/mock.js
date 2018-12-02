@@ -1,21 +1,23 @@
-export const trackables = {
+export const questions = {
   id001: {
     id: 'id001',
     name: 'Meditation',
     type: 'bool',
-    defaultValue: false
+    value: 0,
+    defaultValue: 0
   },
   id002: {
     id: 'id002',
     name: 'Running distance',
     type: 'number',
+    value: 0,
     defaultValue: 0
   },
   id003: {
     id: 'id003',
     name: 'How was your day?',
-    type: 'range',
-    defaultValue: 0,
-    range: [1,10]
+    type: 'number',
+    value: 0,
+    defaultValue: 0
   }
 };
